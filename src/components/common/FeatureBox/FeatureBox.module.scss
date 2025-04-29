@@ -7,22 +7,22 @@ a.link {
 
   &:hover{
     .iconWrapper {
-      color: #ffffff;
+      color: $feature-box-link-icon;
 
       &::after {
-        background-color: $primary;
-        border-color: $primary;
+        background-color: $feature-box-link-hover-bg;
+        border-color: $feature-box-link-hover-bg;
       }
     }
 
     .content {
-      color: $primary;
+      color: $feature-box-link-hover-bg;
     }
   }
 }
 
 .root {
-  border: 1px solid #b6b6b6;
+  border: 1px solid $feature-box-root-border;
   text-align: center;
   margin-top: 40px;
 
@@ -41,7 +41,7 @@ a.link {
 
     &::before {
       content: "";
-      border: 1px solid #b6b6b6;
+      border: 1px solid $feature-box-root-border;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -49,7 +49,7 @@ a.link {
       width: 76px;
       height: 76px;
       border-radius: 100%;
-      background-color: #ffffff;
+      background-color: $feature-box-root-icon-bg-color;
       z-index: -1;
     }
 
@@ -62,7 +62,7 @@ a.link {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      border: 1px solid #b6b6b6;
+      border: 1px solid $feature-box-root-icon-border;
     }
   }
 
@@ -84,16 +84,16 @@ a.link {
 
   &.active {
     .iconWrapper {
-      color: #ffffff;
+      color: $feature-box-root-active;
 
       &::after {
-        background-color: $primary;
-        border-color: $primary;
+        background-color: $feature-box-root-active-bg;
+        border-color: $feature-box-root-active-border;
       }
     }
 
     .content {
-      color: $primary;
+      color: $feature-box-root-active-content;
     }
   }
 }
