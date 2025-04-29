@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import {
@@ -11,38 +11,43 @@ import {
 import styles from './FeatureBoxes.module.scss';
 import FeatureBox from '../../common/FeatureBox/FeatureBox';
 
-const FeatureBoxes = () => (
-  <div className={styles.root}>
-    <div className='container'>
-      <div className='row'>
-        <div className='col'>
-          <FeatureBox icon={faTruck} active>
-            <h5>Free shipping</h5>
-            <p>All orders</p>
-          </FeatureBox>
-        </div>
-        <div className='col'>
-          <FeatureBox icon={faHeadphones}>
-            <h5>24/7 customer</h5>
-            <p>support</p>
-          </FeatureBox>
-        </div>
-        <div className='col'>
-          <FeatureBox icon={faReplyAll}>
-            <h5>Money back</h5>
-            <p>guarantee</p>
-          </FeatureBox>
-        </div>
-        <div className='col'>
-          <FeatureBox icon={faBullhorn}>
-            <h5>Member discount</h5>
-            <p>First order</p>
-          </FeatureBox>
+const FeatureBoxes = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const boxes = [
+    { icon: faTruck, title: 'Free shipping', desc: 'All orders', linkTo: '' },
+    { icon: faHeadphones, title: '24/7 customer', desc: 'support', linkTo: 'support' },
+    { icon: faReplyAll, title: 'Money back', desc: 'guarantee', linkTo: 'guarantee' },
+    {
+      icon: faBullhorn,
+      title: 'Member discount',
+      desc: 'First order',
+      linkTo: 'firstOrder',
+    },
+  ];
+
+  return (
+    <div className={styles.root}>
+      <div className='container'>
+        <div className='row'>
+          {boxes.map((box, index) => (
+            <div className='col' key={index}>
+              <FeatureBox
+                icon={box.icon}
+                linkTo={box.linkTo}
+                active={index === activeIndex}
+                onClick={() => setActiveIndex(index)}
+              >
+                <h5>{box.title}</h5>
+                <p>{box.desc}</p>
+              </FeatureBox>
+            </div>
+          ))}
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 FeatureBoxes.propTypes = {
   children: PropTypes.node,
