@@ -32,7 +32,14 @@
       display: flex;
       justify-content: space-between;
     }
+
+
   }
+
+  .active {
+      color: $product-box-photo-favorite-compare;
+      border-color: $product-box-photo-favorite-compare;
+    }
 
   .content {
     text-align: center;
