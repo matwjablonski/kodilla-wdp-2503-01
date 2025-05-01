@@ -76,3 +76,15 @@
     align-items: center;
   }
 }
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  .oldPrice {
+    text-decoration: line-through;
+    color: $product-box-photo-old-price;
+    font-size: 0.9rem;
+  }
+}
