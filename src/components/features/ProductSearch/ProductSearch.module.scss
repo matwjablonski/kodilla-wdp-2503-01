@@ -1,13 +1,13 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  border: 1px solid $form-border-color;
+  border: 2px solid $form-border-color;
   display: inline-flex;
   height: 45px;
   color: $text-color;
 
   .category {
-    border-right: 1px solid $form-border-color;
+    border-right: 2px solid $form-border-color;
     display: flex;
     align-items: center;
     position: relative;
@@ -27,11 +27,26 @@
 
     select {
       -webkit-appearance: none;
+      height: 100%;
       border: 0;
       background-color: transparent;
       padding: 5px 30px 5px 35px;
       position: relative;
       z-index: 1;
+      outline: none;
+
+      &:focus{
+        outline: none;
+        box-shadow: none;
+      }
+    }
+
+    &:hover {
+      background-color: $primary;
+
+      .icon:first-child {
+        color: black;
+      }
     }
   }
 
@@ -43,9 +58,8 @@
     input {
       border: 0;
       padding-left: 10px;
-      font-size: 14px;
+      font-size: 20px;
       outline: none;
-
       &::placeholder {
         color: $text-color;
       }
@@ -56,5 +70,14 @@
       background-color: transparent;
       outline: none;
     }
+
+    &:hover {
+      background-color: $primary;
+      input{
+        background-color: $primary;
+      }
+    }
   }
 }
+
+
