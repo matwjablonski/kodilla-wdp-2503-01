@@ -1,5 +1,5 @@
 @import "../../../styles/settings.scss";
-
+@import "../../../styles/placeholder.scss";
 .root {
   background-color: $company-claim-bg;
 
@@ -61,9 +61,12 @@
         right: 0;
         transform: translate(50%, -50%);
       }
+      @extend %hover-effects;
 
       &:hover {
         .cartIcon {
+          @extend %hover-effects;
+
           background-color: lighten($company-claim-cart-icon, 10%);
         }
       }
