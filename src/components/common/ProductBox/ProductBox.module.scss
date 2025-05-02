@@ -74,5 +74,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .outlines {
+      display: flex;
+      gap: 10px;
+
+      .active {
+        color: $product-box-photo-line-active;
+        border-color: $product-box-photo-line-active;
+      }
+    }
   }
 }
+
