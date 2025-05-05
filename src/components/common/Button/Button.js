@@ -11,7 +11,7 @@ const Button = ({ children, variant, noHover, className: propClassName, ...props
   if (variant) classes.push(styles[variant]);
   else classes.push('main');
 
-  let Comp = 'button';
+  let Comp = 'a';
 
   if (noHover) {
     classes.push(styles.noHover);
@@ -19,7 +19,7 @@ const Button = ({ children, variant, noHover, className: propClassName, ...props
   }
 
   return (
-    <Comp {...props} className={classes.join(' ')}>
+    <Comp href='#' {...props} className={classes.join(' ')}>
       {children}
     </Comp>
   );
