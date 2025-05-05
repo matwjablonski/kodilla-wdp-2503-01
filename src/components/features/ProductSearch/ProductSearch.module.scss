@@ -1,19 +1,19 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  border: 1px solid $form-border-color;
+  border: 1px solid $product-search-root-border;
   display: inline-flex;
   height: 45px;
   color: $text-color;
 
   .category {
-    border-right: 1px solid $form-border-color;
+    border-right: 1px solid $product-search-root-border;
     display: flex;
     align-items: center;
     position: relative;
 
     .icon:first-child {
-      color: $primary;
+      color: $product-search-icon;
       position: absolute;
       left: 10px;
       z-index: 0;
@@ -27,11 +27,26 @@
 
     select {
       -webkit-appearance: none;
+      height: 100%;
       border: 0;
       background-color: transparent;
       padding: 5px 30px 5px 35px;
       position: relative;
       z-index: 1;
+      outline: none;
+
+      &:focus{
+        outline: none;
+        box-shadow: none;
+      }
+    }
+
+    &:hover {
+      background-color: $product-search-icon;
+
+      .icon:first-child {
+        color: $product-search-icon-hover;
+      }
     }
   }
 
@@ -43,9 +58,8 @@
     input {
       border: 0;
       padding-left: 10px;
-      font-size: 14px;
+      font-size: 20px;
       outline: none;
-
       &::placeholder {
         color: $text-color;
       }
@@ -55,6 +69,13 @@
       border: 0;
       background-color: transparent;
       outline: none;
+    }
+
+    &:hover {
+      background-color: $product-search-field;
+      input{
+        background-color: $product-search-field;
+      }
     }
   }
 }

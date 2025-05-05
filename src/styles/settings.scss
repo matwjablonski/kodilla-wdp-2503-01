@@ -1,13 +1,94 @@
 $base-padding: 24px;
 
-$header-topbar-bg: #434343;
-$header-bg: #363636;
+//Color for using in settings
+$color-white: #ffffff;
+$color-primary: #d58e32;
+$color-dark: #2a2a2a;
+$color-black: #000000;
+$color-grey: #b6b6b6;
+$colo-softGrey: #A9A9A9FF;
+$color-softDark: #363636;
+$color-translucent-black: #01020233;
+$color-lessWhite: #f4f5f7;
+$color-white-2: #e1e1e1;
+$color-white-3: #e2e2e2;
 
-$footer-claim-bg: #2a2a2a;
-$footer-bg: #363636;
+//Global
+$text-color: $color-dark;
 
-$primary: #d58e32;
+//Button.module.scss
+$button-color: $color-white;
+$button-main-bg: $color-dark;
+$button-main-bg-color-hover: $color-primary;
+$button-outline-bg-color-active: $color-primary;
+$button-outline: $color-dark;
 
-$text-color: #2a2a2a;
+//FeatureBox.module.scss
+$feature-box-link-icon: $color-white;
+$feature-box-link-hover-bg: $color-primary;
+$feature-box-root-border: $color-grey;
+$feature-box-feature-box-link-icon: $color-white;
+$feature-box-root-icon-text: $color-dark;
+$feature-box-root-icon-border: $color-grey;
+$feature-box-root-icon-bg-color: $color-white;
+$feature-box-root-active: $color-white;
+$feature-box-root-active-bg: $color-primary;
+$feature-box-root-active-border: $color-primary;
+$feature-box-root-active-content: $color-primary;
 
-$form-border-color: #292929;
+//ProductBox.module.scss
+$product-box-root-border: $color-white-3;
+$product-box-root-bg: $color-white;
+$product-box-photo: $color-lessWhite;
+$product-box-photo-sale: $color-white;
+$product-box-photo-sale-bg: $color-dark;
+$product-box-photo-content: $color-primary;
+$product-box-photo-stars: $color-dark;
+$product-box-photo-line: $color-dark;
+$product-box-photo-line-before: $color-primary;
+
+//NewFurniture.module.scss
+$new-furniture-root: $color-white;
+$new-furniture-root-border: $color-white-2;
+$new-furniture-root-heading-h3: $color-primary;
+$new-furniture-root-heading-border: $color-primary;
+$new-furniture-root-menu: $color-dark;
+$new-furniture-root-menu-border: $color-primary;
+$new-furniture-root-ul-bg: $color-white;
+$new-furniture-root-ul-a-bg: $color-white-3;
+$new-furniture-root-ul-a-bg-hover: $color-primary;
+
+//ProductSearch.module.scss
+$product-search-root-border: $color-dark;
+$product-search-icon: $color-primary;
+$product-search-icon-hover: $color-black;
+$product-search-field: $color-primary;
+
+//CompanyClaim.module.scss
+$company-claim-bg: $color-softDark;
+$company-claim-phone-number: $color-white;
+$company-claim-icon: $color-primary;
+$company-claim-cart: $color-white;
+$company-claim-cart-icon: $color-primary;
+
+//Footer.module.scss
+$footer-bg: $color-softDark;
+$footer-menu: $colo-softGrey;
+$footer-menu-hover: $color-white;
+$footer-claim-bg: $color-dark;
+$footer-bottom-bar: $colo-softGrey;
+$footer-social-media: $colo-softGrey;
+$footer-social-media-hover: $color-primary;
+
+//MenuBar.module.scss
+$menu-bar-bg: $color-white;
+$menu-bar-box: $color-translucent-black;
+$menu-bar-a-border: $color-white;
+$menu-bar-a-active: $color-primary;
+$menu-bar-a-active-color: $color-white;
+
+
+//TopBar.module.scss
+$top-bar-bg: $color-softDark;
+$top-bar-a: $color-white;
+$top-bar-a-hover: $color-primary;
