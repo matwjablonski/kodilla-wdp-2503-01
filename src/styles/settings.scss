@@ -4,6 +4,7 @@ $base-padding: 24px;
 $color-white: #ffffff;
 $color-primary: #d58e32;
 $color-dark: #2a2a2a;
+$color-black: #000000;
 $color-grey: #b6b6b6;
 $colo-softGrey: #A9A9A9FF;
 $color-softDark: #363636;
@@ -42,6 +43,7 @@ $product-box-photo: $color-lessWhite;
 $product-box-photo-sale: $color-white;
 $product-box-photo-sale-bg: $color-dark;
 $product-box-photo-content: $color-primary;
+$product-box-photo-price-change: $color-primary;
 $product-box-photo-stars: $color-dark;
 $product-box-photo-line: $color-dark;
 $product-box-photo-line-before: $color-primary;
@@ -60,6 +62,11 @@ $new-furniture-root-ul-a-bg-hover: $color-primary;
 //ProductSearch.module.scss
 $product-search-root-border: $color-dark;
 $product-search-icon: $color-primary;
+$product-search-icon-hover: $color-black;
+$product-search-field: $color-primary;
+$product-search-dropdown-bg: $color-white;
+$product-search-dropdown-border: $color-black;
+$product-search-li: $color-white;
 
 //CompanyClaim.module.scss
 $company-claim-bg: $color-softDark;
