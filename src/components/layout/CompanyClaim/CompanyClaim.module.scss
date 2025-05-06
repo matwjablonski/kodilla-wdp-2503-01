@@ -49,6 +49,7 @@
       .cartCounter {
         width: 28px;
         height: 27px;
+        padding: 0 6px;
         border-radius: 14px;
         background-color: $company-claim-bg;
         display: flex;
@@ -60,6 +61,11 @@
         top: 50%;
         right: 0;
         transform: translate(50%, -50%);
+        white-space: nowrap;
+
+        &.moveRight{
+          justify-content: flex-start;
+        }
       }
 
       &:hover {

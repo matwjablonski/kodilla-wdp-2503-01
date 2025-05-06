@@ -29,8 +29,18 @@
     }
 
     .buttons {
+      visibility: hidden;
       display: flex;
       justify-content: space-between;
+    }
+  }
+  &:hover{
+    .buttons{
+      visibility: visible;
+    }
+
+    .priceChange{
+      background-color: $primary;
     }
   }
 
