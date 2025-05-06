@@ -1,5 +1,5 @@
 @import "../../../styles/settings.scss";
-
+@import "../../../styles/placeholder.scss";
 .root {
   box-shadow: 2px 3.464px 6px $menu-bar-box;
   background-color: $menu-bar-bg;
@@ -35,15 +35,21 @@
       border-top: 4px solid $menu-bar-a-border;
       font-weight: 500;
       letter-spacing: 1px;
+      @extend %hover-effects;
+
 
       &:hover,
       &.active {
+        @extend %hover-effects;
+
         background-color: $menu-bar-a-active;
         color: $menu-bar-a-active-color;
         border-color: $menu-bar-a-active;
       }
 
       &.active {
+        @extend %hover-effects;
+
         border-color: $text-color;
       }
     }

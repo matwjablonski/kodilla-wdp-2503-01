@@ -1,0 +1,8 @@
+@import "./settings.scss";
+
+%hover-effects{
+  transition:
+    background-color $hover-transition-bg ease,
+    color $hover-transition-color ease,
+    transform  $hover-transition-move ease;
+}
