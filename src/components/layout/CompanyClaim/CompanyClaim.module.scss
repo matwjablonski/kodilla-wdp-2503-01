@@ -1,5 +1,5 @@
 @import "../../../styles/settings.scss";
-
+@import "../../../styles/placeholder.scss";
 .root {
   background-color: $company-claim-bg;
 
@@ -67,9 +67,12 @@
           justify-content: flex-start;
         }
       }
+      @extend %hover-effects;
 
       &:hover {
         .cartIcon {
+          @extend %hover-effects;
+
           background-color: lighten($company-claim-cart-icon, 10%);
         }
       }
