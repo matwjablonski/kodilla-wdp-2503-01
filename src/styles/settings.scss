@@ -4,6 +4,7 @@ $base-padding: 24px;
 $color-white: #ffffff;
 $color-primary: #d58e32;
 $color-dark: #2a2a2a;
+$color-black: #000000;
 $color-grey: #b6b6b6;
 $colo-softGrey: #A9A9A9FF;
 $color-softDark: #363636;
@@ -62,6 +63,8 @@ $new-furniture-root-ul-a-bg-hover: $color-primary;
 //ProductSearch.module.scss
 $product-search-root-border: $color-dark;
 $product-search-icon: $color-primary;
+$product-search-icon-hover: $color-black;
+$product-search-field: $color-primary;
 
 //CompanyClaim.module.scss
 $company-claim-bg: $color-softDark;
