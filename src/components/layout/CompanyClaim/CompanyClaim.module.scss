@@ -79,3 +79,31 @@
     }
   }
 }
+
+@media (max-width: 765px) {
+  .root{
+    .banner{
+      position: relative;
+    }
+    .phoneNumber{
+      justify-content: end;
+      bottom: 10%;
+      display: flex;
+      order: 3;
+      font-size: 14px;
+      position: absolute;
+    }
+    .logo{
+      order: 1;
+      display: flex;
+      height: 100%;
+      align-items: center;
+    }
+    .cart{
+      position: absolute;
+      order: 2;
+      right: 10%;
+      top: 20%;
+    }
+  }
+}
