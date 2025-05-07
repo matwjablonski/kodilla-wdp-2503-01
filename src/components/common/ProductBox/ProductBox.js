@@ -13,7 +13,7 @@ import Button from '../Button/Button';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleCompare } from '../../../redux/compereRedux';
 
-const ProductBox = ({ id, name, price, promo, stars }) => {
+const ProductBox = ({ id, category, name, price, promo, stars }) => {
   const dispatch = useDispatch();
   const compared = useSelector(state => state.compared);
 
@@ -29,8 +29,12 @@ const ProductBox = ({ id, name, price, promo, stars }) => {
 
   return (
     <div className={styles.root}>
-      <div className={styles.photo}>
-        {promo && <div className={styles.sale}>{promo}</div>}
+      <div
+        className={styles.photo}
+        style={{
+          backgroundImage: `url(${process.env.PUBLIC_URL}/images/products/${category}/${id}.jpg)`,
+        }}
+      >
         <div className={styles.buttons}>
           <Button variant='small'>Quick View</Button>
           <Button variant='small'>
@@ -77,8 +81,9 @@ const ProductBox = ({ id, name, price, promo, stars }) => {
 };
 
 ProductBox.propTypes = {
-  children: PropTypes.node,
   id: PropTypes.string,
+  category: PropTypes.string,
+  children: PropTypes.node,
   name: PropTypes.string,
   price: PropTypes.number,
   promo: PropTypes.string,

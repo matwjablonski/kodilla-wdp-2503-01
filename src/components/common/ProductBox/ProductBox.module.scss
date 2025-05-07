@@ -9,8 +9,8 @@
     position: relative;
     padding: 80% 10px 0 10px;
     background: {
+      size: cover;
       color: $product-box-photo;
-      size: contain;
       position: center;
       repeat: no-repeat;
     }
@@ -46,7 +46,10 @@
       background-color: $product-box-photo-line-before;
     }
   }
-
+.active {
+    color: $button-main-bg-color-hover;
+    border-color: $button-main-bg-color-hover;
+  }
   .content {
     text-align: center;
     padding: 20px;
@@ -88,10 +91,7 @@
     justify-content: space-between;
     align-items: center;
 
-    .outline :global(.active) {
-      color: $button-main-bg-color-hover;
-      border-color: $button-main-bg-color-hover;
-    }
+
 
   }
 }
