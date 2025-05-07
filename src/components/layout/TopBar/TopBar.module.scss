@@ -40,3 +40,19 @@
     }
   }
 }
+
+@media (max-width: 765px) {
+  .root {
+    .hideText {
+      display: none;
+    }
+
+    .topMenu {
+      ul{
+        li:first-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
