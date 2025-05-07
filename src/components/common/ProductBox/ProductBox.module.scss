@@ -32,11 +32,9 @@
       visibility: hidden;
       display: flex;
       justify-content: space-between;
-
     }
-
-
   }
+
   &:hover{
     .buttons{
       visibility: visible;
@@ -46,10 +44,12 @@
       background-color: $product-box-photo-line-before;
     }
   }
-.active {
-    color: $button-main-bg-color-hover;
-    border-color: $button-main-bg-color-hover;
-  }
+
+  .active {
+      color: $button-main-bg-color-hover;
+      border-color: $button-main-bg-color-hover;
+    }
+
   .content {
     text-align: center;
     padding: 20px;
@@ -90,8 +90,5 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-
-
   }
 }

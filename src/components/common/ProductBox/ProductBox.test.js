@@ -1,23 +1,22 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 import { shallow } from 'enzyme';
 import ProductBox from './ProductBox';
-import * as reactRedux from 'react-redux';
+
+const mockState = {
+  compared: [],
+};
+
+const mockReducer = (state = mockState, action) => state;
+const mockStore = createStore(mockReducer);
 
 describe('Component ProductBox', () => {
-  beforeEach(() => {
-    jest.spyOn(reactRedux, 'useDispatch').mockReturnValue(jest.fn());
-    jest
-      .spyOn(reactRedux, 'useSelector')
-      .mockImplementation(selector => selector({ compared: [] }));
-  });
-
-  afterEach(() => {
-    jest.clearAllMocks();
-  });
-
   it('should render without crashing', () => {
     const component = shallow(
-      <ProductBox id='abc' name='Test name' price={99} stars={4} />
+      <Provider store={mockStore}>
+        <ProductBox />
+      </Provider>
     );
     expect(component).toBeTruthy();
   });
