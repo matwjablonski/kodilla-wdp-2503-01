@@ -19,12 +19,16 @@ const CompareBar = ({ products }) => {
               className={styles.product}
               onClick={() => dispatch(toggleCompare(product.id))}
             >
-              <img src={product.image} alt={product.name} />
+              <img
+                src={`${process.env.PUBLIC_URL}/images/products/${product.category}/${product.id}.jpg`}
+                alt={product.name}
+                className={styles.image}
+              />
               <span className={styles.remove}>x</span>
             </div>
           ))}
-          <Button variant='small'>Compare</Button>
         </div>
+        <Button variant='small'>Compare</Button>
       </div>
     )
   );

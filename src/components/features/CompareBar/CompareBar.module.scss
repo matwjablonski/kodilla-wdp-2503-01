@@ -1,44 +1,50 @@
 @import '../../../styles/settings.scss';
 
 .root {
-    position: fixed;
-    bottom: 0;
-    width: 80%;
-    background: $compare-bar-bg;
-    box-shadow: 0 -2px 8px $compare-bar-box;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: $compare-bar-bg;
+  box-shadow: 0 -2px 8px $compare-bar-box;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.products {
+  display: flex;
+  gap: 10px;
+}
+
+.product {
+  position: relative;
+  cursor: pointer;
+
+  .image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
   }
 
-  .products {
-    display: flex;
-    gap: 10px;
-  }
-
-  .product {
-    position: relative;
+  .remove {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: $compare-bar-remove-bg;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 50%;
+    display: none;
     cursor: pointer;
-
-    img {
-      height: 50px;
-      width: auto;
-    }
-
-    .remove {
-      position: absolute;
-      top: 0;
-      right: 0;
-      background: $compare-bar-bg;
-      color: $compare-bar-remove-bg;
-      font-weight: bold;
-      padding: 2px 5px;
-      display: none;
-    }
-
-    &:hover .remove {
-      display: block;
-    }
   }
+
+  &:hover .remove {
+    display: block;
+  }
+}

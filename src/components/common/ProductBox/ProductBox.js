@@ -25,7 +25,6 @@ const ProductBox = ({ id, category, name, price, promo, stars }) => {
       dispatch(toggleCompare(id));
     }
   };
-  console.log(compared);
 
   return (
     <div className={styles.root}>
