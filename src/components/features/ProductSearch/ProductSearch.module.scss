@@ -2,73 +2,97 @@
 
 .root {
   border: 1px solid $product-search-root-border;
-  display: inline-flex;
+  display: flex;
   height: 45px;
   color: $text-color;
 
   .category {
-    border-right: 1px solid $product-search-root-border;
     display: flex;
     align-items: center;
+    border-right: 1px solid $product-search-root-border;
     position: relative;
-
-    .icon:first-child {
-      color: $product-search-icon;
-      position: absolute;
-      left: 10px;
-      z-index: 0;
-    }
-
-    .icon:last-child {
-      position: absolute;
-      right: 10px;
-      z-index: 0;
-    }
-
-    select {
-      -webkit-appearance: none;
-      height: 100%;
-      border: 0;
-      background-color: transparent;
-      padding: 5px 30px 5px 35px;
-      position: relative;
-      z-index: 1;
-      outline: none;
-
-      &:focus{
-        outline: none;
-        box-shadow: none;
-      }
-    }
-
-    &:hover {
-      background-color: $product-search-icon;
-
-      .icon:first-child {
-        color: $product-search-icon-hover;
-      }
-    }
   }
 
   .searchField {
     display: flex;
     align-items: center;
-    position: relative;
 
     input {
-      border: 0;
+      border: none;
       padding-left: 10px;
       font-size: 20px;
       outline: none;
+
       &::placeholder {
         color: $text-color;
       }
     }
 
     button {
-      border: 0;
-      background-color: transparent;
-      outline: none;
+      background: transparent;
+      border: none;
+      padding: 5px;
+      cursor: pointer;
+    }
+  }
+}
+
+.iconLeft {
+  color: $product-search-icon;
+  margin-left: 10px;
+}
+
+.iconRight {
+  margin-left: 10px;
+}
+
+.dropdown {
+  position: relative;
+  height: 100%;
+
+  &:hover .dropdownMenu {
+    display: block;
+  }
+}
+
+.dropdownToggle {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font: inherit;
+  z-index: 1;
+  outline: none !important;
+  height: 100% !important;
+}
+
+.dropdownMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background:$product-search-dropdown-bg;
+  border: 1px solid $product-search-dropdown-border;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+  width: 100%;
+
+  li {
+    button {
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      padding: 8px 12px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $product-search-li;
+      }
     }
 
     &:hover {
