@@ -42,13 +42,14 @@
 }
 
 @media (max-width: 765px) {
-  .root{
-    .hideText{
+  .root {
+    .hideText {
       display: none;
     }
-    .topMenu{
+
+    .topMenu {
       ul{
-        li:first-child{
+        li:first-child {
           margin: 0;
         }
       }
