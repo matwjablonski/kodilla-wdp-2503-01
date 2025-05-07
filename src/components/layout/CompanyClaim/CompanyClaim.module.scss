@@ -63,7 +63,7 @@
         transform: translate(50%, -50%);
         white-space: nowrap;
 
-        &.moveRight{
+        &.moveRight {
           justify-content: flex-start;
         }
       }
@@ -81,11 +81,11 @@
 }
 
 @media (max-width: 765px) {
-  .root{
-    .banner{
+  .root {
+    .banner {
       position: relative;
     }
-    .phoneNumber{
+    .phoneNumber {
       justify-content: end;
       bottom: 10%;
       display: flex;
@@ -93,13 +93,13 @@
       font-size: 14px;
       position: absolute;
     }
-    .logo{
+    .logo {
       order: 1;
       display: flex;
       height: 100%;
       align-items: center;
     }
-    .cart{
+    .cart {
       position: absolute;
       order: 2;
       right: 10%;
