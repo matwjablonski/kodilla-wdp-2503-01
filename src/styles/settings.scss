@@ -1,5 +1,10 @@
 $base-padding: 24px;
 
+//Hover animation settings
+$hover-transition-bg: 250ms;
+$hover-transition-color: 250ms;
+$hover-transition-move: 250ms;
+
 //Color for using in settings
 $color-white: #ffffff;
 $color-primary: #d58e32;
@@ -44,6 +49,7 @@ $product-box-photo: $color-lessWhite;
 $product-box-photo-sale: $color-white;
 $product-box-photo-sale-bg: $color-dark;
 $product-box-photo-content: $color-primary;
+$product-box-photo-price-change: $color-primary;
 $product-box-photo-stars: $color-dark;
 $product-box-photo-line: $color-dark;
 $product-box-photo-line-before: $color-primary;
@@ -65,6 +71,9 @@ $product-search-root-border: $color-dark;
 $product-search-icon: $color-primary;
 $product-search-icon-hover: $color-black;
 $product-search-field: $color-primary;
+$product-search-dropdown-bg: $color-white;
+$product-search-dropdown-border: $color-black;
+$product-search-li: $color-white;
 
 //CompanyClaim.module.scss
 $company-claim-bg: $color-softDark;

@@ -1,5 +1,5 @@
 @import "../../../styles/settings.scss";
-
+@import "../../../styles/placeholder.scss";
 .root {
   .panelBar {
     margin-bottom: 30px;
@@ -41,6 +41,8 @@
           display: inline-block;
           margin: 0 0.5rem;
           font-weight: 600;
+          @extend %hover-effects;
+
 
           a {
             color: $new-furniture-root-menu;
@@ -48,9 +50,13 @@
             text-decoration: none;
             font-size: 18px;
             display: block;
+            @extend %hover-effects;
+
 
             &.active,
             &:hover {
+              @extend %hover-effects;
+
               &::before {
                 content: "";
                 position: absolute;
@@ -88,9 +94,12 @@
             border-radius: 6px;
             background-color: $new-furniture-root-ul-a-bg;
             font-size: 0;
+            @extend %hover-effects;
 
             &.active,
             &:hover {
+              @extend %hover-effects;
+
               background-color: $new-furniture-root-ul-a-bg-hover;
             }
           }
