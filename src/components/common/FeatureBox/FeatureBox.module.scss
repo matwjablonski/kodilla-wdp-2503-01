@@ -1,21 +1,28 @@
 @import "../../../styles/settings.scss";
-
+@import "../../../styles/placeholder.scss";
 a.link {
   text-decoration: none;
   color: inherit;
   display: block;
+  @extend %hover-effects;
 
   &:hover{
     .iconWrapper {
+      @extend %hover-effects;
+
       color: $feature-box-link-icon;
 
       &::after {
+        @extend %hover-effects;
+
         background-color: $feature-box-link-hover-bg;
         border-color: $feature-box-link-hover-bg;
       }
     }
 
     .content {
+      @extend %hover-effects;
+
       color: $feature-box-link-hover-bg;
     }
   }
