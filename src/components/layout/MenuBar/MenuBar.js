@@ -11,16 +11,23 @@ import Button from '../../common/Button/Button';
 const MenuBar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const styleSet = {
+    menu: 'col-auto ' + styles.menu,
+    dropDownButton: 'col-auto ' + styles.dropDownButton,
+    mdSearch: 'col-auto ' + styles.mdSearch,
+    main: 'row align-items-center ' + styles.main,
+  };
+
   const toggleMobileMenu = () => {
     setMobileMenuOpen(prev => !prev);
   };
   return (
     <div className={styles.root}>
       <div className='container'>
-        <div className='row align-items-center'>
-          <div className={'col ' + styles.mdSearch}>
+        <div className={styleSet.main}>
+          <div className={styleSet.mdSearch}>
             <ProductSearch />
-            <div className={'col-auto' + styles.dropDownButton}>
+            <div className={styleSet.dropDownButton}>
               <Button
                 className={styles.menuToggle}
                 onClick={toggleMobileMenu}
@@ -58,7 +65,7 @@ const MenuBar = () => {
               )}
             </div>
           </div>
-          <div className={'col-auto ' + styles.menu}>
+          <div className={styleSet.menu}>
             <ul>
               <li>
                 <a href='#' className={styles.active}>

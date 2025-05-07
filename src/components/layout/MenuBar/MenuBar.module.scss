@@ -60,11 +60,15 @@
 }
 
 @media (max-width: 765px) {
-  .root{
+  .root {
     .menu {
       display: none;
     }
-    .menuToggle{
+    .main {
+      display: block;
+      margin-top: 10px;
+    }
+    .menuToggle {
       display: block;
     }
     .mdSearch {
@@ -73,15 +77,15 @@
       position: relative;
       align-items: center;
 
-      ul{
+      ul {
         list-style: none;
         margin-right: 10px;
         padding: 0;
 
-        li{
+        li {
           padding: 0 10px;
           text-decoration: none;
-          &:hover{
+          &:hover {
             background-color: $menu-bar-a-active;
 
             a{
@@ -95,7 +99,7 @@
     .dropDownButton {
       position: relative;
 
-      button{
+      button {
 
       }
     }
@@ -103,8 +107,8 @@
       position: absolute;
       top: 100%;
       right: 0;
-      background-color: white;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      background-color: $menu-bar-mobile-dropdown-bg;
+      box-shadow: 0 4px 8px $menu-bar-mobile-dropdown-box;
       z-index: 1000;
       width: max-content;
 
@@ -112,13 +116,13 @@
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  .root{
+  .root {
     position: relative;
-    .menu{
+    .menu {
       order: 1;
     }
   }
-  .mdSearch{
+  .mdSearch {
     position: absolute;
     top: 120%;
   }
