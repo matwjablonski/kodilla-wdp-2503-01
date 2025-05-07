@@ -20,6 +20,7 @@ const ProductBox = ({
   stars,
   isFavorite,
   isCompare,
+  oldPrice,
 }) => (
   <div className={styles.root}>
     <div
@@ -61,6 +62,7 @@ const ProductBox = ({
         </Button>
       </div>
       <div className={styles.price}>
+        {oldPrice && <span className={styles.oldPrice}>$ {oldPrice}</span>}
         <Button noHover variant='small' className={styles.priceChange}>
           $ {price}
         </Button>
@@ -79,6 +81,7 @@ ProductBox.propTypes = {
   stars: PropTypes.number,
   isFavorite: PropTypes.bool,
   isCompare: PropTypes.bool,
+  oldPrice: PropTypes.number,
 };
 
 export default ProductBox;

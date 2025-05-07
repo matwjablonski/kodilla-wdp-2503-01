@@ -21,6 +21,8 @@ const MenuBar = () => {
   const toggleMobileMenu = () => {
     setMobileMenuOpen(prev => !prev);
   };
+
+  const menuItems = ['Home', 'Furniture', 'Chair', 'Table', 'Sofa', 'Bedroom', 'Blog'];
   return (
     <div className={styles.root}>
       <div className='container'>
@@ -39,27 +41,13 @@ const MenuBar = () => {
               {mobileMenuOpen && (
                 <div className={styles.mobileDropdown}>
                   <ul>
-                    <li>
-                      <a href='#'>Home</a>
-                    </li>
-                    <li>
-                      <a href='#'>Furniture</a>
-                    </li>
-                    <li>
-                      <a href='#'>Chair</a>
-                    </li>
-                    <li>
-                      <a href='#'>Table</a>
-                    </li>
-                    <li>
-                      <a href='#'>Sofa</a>
-                    </li>
-                    <li>
-                      <a href='#'>Bedroom</a>
-                    </li>
-                    <li>
-                      <a href='#'>Blog</a>
-                    </li>
+                    {menuItems.map((menuItem, index) => (
+                      <li key={menuItem.id}>
+                        <a href='#' className={index === 0 ? styles.active : ''}>
+                          {menuItem}
+                        </a>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               )}
@@ -67,29 +55,13 @@ const MenuBar = () => {
           </div>
           <div className={styleSet.menu}>
             <ul>
-              <li>
-                <a href='#' className={styles.active}>
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href='#'>Furniture</a>
-              </li>
-              <li>
-                <a href='#'>Chair</a>
-              </li>
-              <li>
-                <a href='#'>Table</a>
-              </li>
-              <li>
-                <a href='#'>Sofa</a>
-              </li>
-              <li>
-                <a href='#'>Bedroom</a>
-              </li>
-              <li>
-                <a href='#'>Blog</a>
-              </li>
+              {menuItems.map((menuItem, index) => (
+                <li key={menuItem.id}>
+                  <a href='#' className={index === 0 ? styles.active : ''}>
+                    {menuItem}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

@@ -104,3 +104,13 @@ a.link {
     }
   }
 }
+
+@media (max-width: 765px) {
+  a.link {
+    display: flex;
+    height: 100%;
+    .root {
+      width: 100%;
+    }
+  }
+}

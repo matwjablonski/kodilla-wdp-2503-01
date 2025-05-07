@@ -31,7 +31,7 @@ const FeatureBoxes = () => {
       <div className='container'>
         <div className='row'>
           {boxes.map((box, index) => (
-            <div className='col' key={index}>
+            <div className='col-6 col-lg-3 mt-2' key={index}>
               <FeatureBox
                 icon={box.icon}
                 linkTo={box.linkTo}
