@@ -1,0 +1,44 @@
+@import '../../../styles/settings.scss';
+
+.root {
+    position: fixed;
+    bottom: 0;
+    width: 80%;
+    background: $compare-bar-bg;
+    box-shadow: 0 -2px 8px $compare-bar-box;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .products {
+    display: flex;
+    gap: 10px;
+  }
+
+  .product {
+    position: relative;
+    cursor: pointer;
+
+    img {
+      height: 50px;
+      width: auto;
+    }
+
+    .remove {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: $compare-bar-bg;
+      color: $compare-bar-remove-bg;
+      font-weight: bold;
+      padding: 2px 5px;
+      display: none;
+    }
+
+    &:hover .remove {
+      display: block;
+    }
+  }

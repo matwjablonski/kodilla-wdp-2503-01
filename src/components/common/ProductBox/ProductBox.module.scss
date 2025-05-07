@@ -32,7 +32,10 @@
       visibility: hidden;
       display: flex;
       justify-content: space-between;
+
     }
+
+
   }
   &:hover{
     .buttons{
@@ -40,7 +43,7 @@
     }
 
     .priceChange{
-      background-color: $primary;
+      background-color: $product-box-photo-line-before;
     }
   }
 
@@ -84,5 +87,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .outline :global(.active) {
+      color: $button-main-bg-color-hover;
+      border-color: $button-main-bg-color-hover;
+    }
+
   }
 }
