@@ -27,7 +27,7 @@ const ProductBox = ({
   const dispatch = useDispatch();
 
   const handleToggleFavorite = e => {
-    e.prevntDefault();
+    e.preventDefault();
     dispatch(toggleFavorite(id));
   };
 
