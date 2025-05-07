@@ -34,15 +34,21 @@
       justify-content: space-between;
     }
   }
+
   &:hover{
     .buttons{
       visibility: visible;
     }
 
     .priceChange{
-      background-color: $color-grey;
+      background-color: $product-box-photo-line-before;
     }
   }
+
+  .active {
+      color: $button-main-bg-color-hover;
+      border-color: $button-main-bg-color-hover;
+    }
 
   .content {
     text-align: center;

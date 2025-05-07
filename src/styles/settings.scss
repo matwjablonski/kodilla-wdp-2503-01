@@ -17,6 +17,8 @@ $color-translucent-black: #01020233;
 $color-lessWhite: #f4f5f7;
 $color-white-2: #e1e1e1;
 $color-white-3: #e2e2e2;
+$color-cream: #e6e68d;
+$color-red: red;
 
 //Global
 $text-color: $color-dark;
@@ -101,3 +103,9 @@ $menu-bar-a-active-color: $color-white;
 $top-bar-bg: $color-softDark;
 $top-bar-a: $color-white;
 $top-bar-a-hover: $color-primary;
+
+
+//CompareBar.module.scss
+$compare-bar-bg: $color-white;
+$compare-bar-box: $color-black;
+$compare-bar-remove-bg: $color-primary;
