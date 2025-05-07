@@ -17,6 +17,8 @@ $color-translucent-black: #01020233;
 $color-lessWhite: #f4f5f7;
 $color-white-2: #e1e1e1;
 $color-white-3: #e2e2e2;
+$form-border-color: #292929;
+$color-red: #d32f2f;
 
 
 //Global
@@ -42,6 +44,7 @@ $feature-box-root-active-bg: $color-primary;
 $feature-box-root-active-border: $color-primary;
 $feature-box-root-active-content: $color-primary;
 
+
 //ProductBox.module.scss
 $product-box-root-border: $color-white-3;
 $product-box-root-bg: $color-white;
@@ -53,6 +56,7 @@ $product-box-photo-price-change: $color-primary;
 $product-box-photo-stars: $color-dark;
 $product-box-photo-line: $color-dark;
 $product-box-photo-line-before: $color-primary;
+$product-box-photo-favorite-compare: $color-red;
 $product-box-photo-old-price: $color-grey;
 
 //NewFurniture.module.scss
@@ -103,3 +107,6 @@ $menu-bar-a-active-color: $color-white;
 $top-bar-bg: $color-softDark;
 $top-bar-a: $color-white;
 $top-bar-a-hover: $color-primary;
+
+
+$product-box-photo-favorite-compare: $color-red;
