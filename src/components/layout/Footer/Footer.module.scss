@@ -80,3 +80,24 @@
     }
   }
 }
+
+@media (max-width: 420px) {
+  .root {
+    .topContainer {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 991px){
+  .root {
+    .bottomContainer {
+      color: red;
+      .content {
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
