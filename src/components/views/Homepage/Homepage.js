@@ -15,7 +15,7 @@ const Homepage = () => {
     <div className={styles.root}>
       <FeatureBoxes />
       <NewFurniture />
-      <CompareBar products={products} />
+      <CompareBar />
     </div>
   );
 };

@@ -4,9 +4,11 @@ import styles from './CompareBar.module.scss';
 import { toggleCompare } from '../../../redux/compereRedux';
 import Button from '../../common/Button/Button';
 
-const CompareBar = ({ products }) => {
+const CompareBar = () => {
   const compared = useSelector(state => state.compared);
+  const products = useSelector(state => state.products);
   const dispatch = useDispatch();
+
   const comparedProducts = products.filter(product => compared.includes(product.id));
 
   return (
@@ -24,7 +26,7 @@ const CompareBar = ({ products }) => {
                 alt={product.name}
                 className={styles.image}
               />
-              <span className={styles.remove}>x</span>
+              <span className={styles.remove}>×</span>
             </div>
           ))}
         </div>
