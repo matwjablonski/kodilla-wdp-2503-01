@@ -9,14 +9,23 @@ class NewFurniture extends React.Component {
   state = {
     activePage: 0,
     activeCategory: 'bed',
+    isFade: false,
   };
 
   handlePageChange(newPage) {
-    this.setState({ activePage: newPage });
+    this.setState({ isFade: true }, () => {
+      setTimeout(() => {
+        this.setState({ activePage: newPage, isFade: false });
+      }, 300);
+    });
   }
 
   handleCategoryChange(newCategory) {
-    this.setState({ activeCategory: newCategory });
+    this.setState({ isFade: true }, () => {
+      setTimeout(() => {
+        this.setState({ activeCategory: newCategory, isFade: false });
+      }, 300);
+    });
   }
 
   render() {
@@ -25,6 +34,9 @@ class NewFurniture extends React.Component {
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / 8);
+    const productClassName = `${styles.productsWrapper} ${
+      this.state.isFade ? styles.fadeOut : ''
+    } row`;
 
     const styleSet = {
       heading: 'col-auto ' + styles.heading,
@@ -87,7 +99,7 @@ class NewFurniture extends React.Component {
                 </div>
               </div>
             </div>
-            <div className='row'>
+            <div className={productClassName}>
               {categoryProducts
                 .slice(activePage * 8, (activePage + 1) * 8)
                 .map(item => (
