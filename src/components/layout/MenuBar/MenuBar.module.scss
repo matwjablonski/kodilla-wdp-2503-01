@@ -55,3 +55,75 @@
     }
   }
 }
+.menuToggle{
+  display: none;
+}
+
+@media (max-width: 765px) {
+  .root {
+    .menu {
+      display: none;
+    }
+    .main {
+      display: block;
+      margin-top: 10px;
+    }
+    .menuToggle {
+      display: block;
+    }
+    .mdSearch {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      align-items: center;
+
+      ul {
+        list-style: none;
+        margin-right: 10px;
+        padding: 0;
+
+        li {
+          padding: 0 10px;
+          text-decoration: none;
+          &:hover {
+            background-color: $menu-bar-a-active;
+
+            a{
+              text-decoration: none;
+              color: $menu-bar-a-active-color;
+            }
+          }
+        }
+      }
+    }
+    .dropDownButton {
+      position: relative;
+
+      button {
+
+      }
+    }
+    .mobileDropdown {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: $menu-bar-mobile-dropdown-bg;
+      box-shadow: 0 4px 8px $menu-bar-mobile-dropdown-box;
+      z-index: 1000;
+      width: max-content;
+
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .root {
+    position: relative;
+    .menu {
+      order: 1;
+    }
+  }
+  .mdSearch {
+    position: absolute;
+    top: 120%;
+  }
+}

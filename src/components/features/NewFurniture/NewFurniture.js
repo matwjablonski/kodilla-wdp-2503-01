@@ -26,6 +26,13 @@ class NewFurniture extends React.Component {
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / 8);
 
+    const styleSet = {
+      heading: 'col-auto ' + styles.heading,
+      dots: 'col-auto ' + styles.dots,
+      menu: 'col ' + styles.menu,
+      product: 'col-6 col-md-4 col-lg-3',
+    };
+
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
       dots.push(
@@ -58,10 +65,10 @@ class NewFurniture extends React.Component {
           <div className='container'>
             <div className={styles.panelBar}>
               <div className='row no-gutters align-items-end'>
-                <div className={'col-auto ' + styles.heading}>
+                <div className={styleSet.heading}>
                   <h3>New furniture</h3>
                 </div>
-                <div className={'col ' + styles.menu}>
+                <div className={styleSet.menu}>
                   <ul>
                     {categories.map(item => (
                       <li key={item.id}>
@@ -75,7 +82,7 @@ class NewFurniture extends React.Component {
                     ))}
                   </ul>
                 </div>
-                <div className={'col-auto ' + styles.dots}>
+                <div className={styleSet.dots}>
                   <ul>{dots}</ul>
                 </div>
               </div>
@@ -84,7 +91,7 @@ class NewFurniture extends React.Component {
               {categoryProducts
                 .slice(activePage * 8, (activePage + 1) * 8)
                 .map(item => (
-                  <div key={item.id} className='col-3'>
+                  <div key={item.id} className={styleSet.product}>
                     <ProductBox {...item} />
                   </div>
                 ))}

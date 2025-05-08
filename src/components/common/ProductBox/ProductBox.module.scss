@@ -33,6 +33,8 @@
       display: flex;
       justify-content: space-between;
     }
+
+
   }
   &:hover{
     .buttons{
@@ -40,9 +42,14 @@
     }
 
     .priceChange{
-      background-color: $color-grey;
+      background-color: $product-box-photo-line-before;
     }
   }
+
+  .active {
+      color: $product-box-photo-favorite-compare;
+      border-color: $product-box-photo-favorite-compare;
+    }
 
   .content {
     text-align: center;
@@ -84,5 +91,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  .oldPrice {
+    text-decoration: line-through;
+    color: $product-box-photo-old-price;
+    font-size: 0.9rem;
   }
 }
