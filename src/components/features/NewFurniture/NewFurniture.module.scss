@@ -109,14 +109,23 @@
   }
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
 .productsWrapper {
-  transition: all $hover-transition-move ease-in-out;
-}
 
-.fadeOut {
-  opacity: 0;
-}
+  &.fadeIn {
+    animation: fadeIn #{ $hover-transition-move } ease-in-out forwards;
+  }
 
-.fadeIn {
-  opacity: 1;
+  &.fadeOut {
+    animation: fadeOut #{ $hover-transition-move } ease-in-out forwards;
+  }
 }
