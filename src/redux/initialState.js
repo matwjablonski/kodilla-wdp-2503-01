@@ -18,7 +18,7 @@ const initialState = {
       isFavorite: true,
       isCompare: true,
       oldPrice: 50,
-      myReting: 4,
+      myRating: 4,
     },
     {
       id: 'aenean-ru-bristique-2',
