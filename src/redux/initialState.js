@@ -18,6 +18,7 @@ const initialState = {
       isFavorite: true,
       isCompare: true,
       oldPrice: 50,
+      myRating: 4,
     },
     {
       id: 'aenean-ru-bristique-2',
@@ -261,6 +262,7 @@ const initialState = {
   cart: {
     products: [],
   },
+  compared: [],
 };
 
 export default initialState;

@@ -53,7 +53,6 @@ $product-box-photo-sale: $color-white;
 $product-box-photo-sale-bg: $color-dark;
 $product-box-photo-content: $color-primary;
 $product-box-photo-price-change: $color-primary;
-$product-box-photo-stars: $color-dark;
 $product-box-photo-line: $color-dark;
 $product-box-photo-line-before: $color-primary;
 $product-box-photo-favorite-compare: $color-red;
@@ -78,6 +77,7 @@ $product-search-field: $color-primary;
 $product-search-dropdown-bg: $color-white;
 $product-search-dropdown-border: $color-black;
 $product-search-li: $color-white;
+$product-box-photo-favorite-compare: $color-red;
 
 //CompanyClaim.module.scss
 $company-claim-bg: $color-softDark;
@@ -111,4 +111,11 @@ $top-bar-a: $color-white;
 $top-bar-a-hover: $color-primary;
 
 
-$product-box-photo-favorite-compare: $color-red;
+//CompareBar.module.scss
+$compare-bar-bg: $color-white;
+$compare-bar-box: $color-black;
+$compare-bar-remove-bg: $color-primary;
+
+//SatrRating.module.scss
+$starRating-stars: $color-black;
+$starRating-stars-myRating: $color-primary;
