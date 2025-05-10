@@ -12,6 +12,7 @@ import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons'
 import Button from '../Button/Button';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleCompare } from '../../../redux/compereRedux';
+import StarRating from '../../features/StarRating/StarRating';
 
 const ProductBox = ({
   id,
@@ -23,6 +24,7 @@ const ProductBox = ({
   isFavorite,
   isCompare,
   oldPrice,
+  myRating,
 }) => {
   const dispatch = useDispatch();
   const compared = useSelector(state => state.compared);
@@ -53,17 +55,7 @@ const ProductBox = ({
       </div>
       <div className={styles.content}>
         <h5>{name}</h5>
-        <div className={styles.stars}>
-          {[1, 2, 3, 4, 5].map(i => (
-            <a key={i} href='#'>
-              {i <= stars ? (
-                <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
-              ) : (
-                <FontAwesomeIcon icon={farStar}>{i} stars</FontAwesomeIcon>
-              )}
-            </a>
-          ))}
-        </div>
+        <StarRating stars={stars} myRating={myRating} />
       </div>
       <div className={styles.line}></div>
       <div className={styles.actions}>
@@ -101,6 +93,7 @@ ProductBox.propTypes = {
   isFavorite: PropTypes.bool,
   isCompare: PropTypes.bool,
   oldPrice: PropTypes.number,
+  myRating: PropTypes.number,
 };
 
 export default ProductBox;

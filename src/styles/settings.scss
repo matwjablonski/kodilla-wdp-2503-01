@@ -53,7 +53,6 @@ $product-box-photo-sale: $color-white;
 $product-box-photo-sale-bg: $color-dark;
 $product-box-photo-content: $color-primary;
 $product-box-photo-price-change: $color-primary;
-$product-box-photo-stars: $color-dark;
 $product-box-photo-line: $color-dark;
 $product-box-photo-line-before: $color-primary;
 $product-box-photo-favorite-compare: $color-red;
@@ -116,3 +115,7 @@ $top-bar-a-hover: $color-primary;
 $compare-bar-bg: $color-white;
 $compare-bar-box: $color-black;
 $compare-bar-remove-bg: $color-primary;
+
+//SatrRating.module.scss
+$starRating-stars: $color-black;
+$starRating-stars-myRating: $color-primary;
