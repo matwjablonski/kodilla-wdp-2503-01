@@ -103,3 +103,32 @@
     }
   }
 }
+
+@media (max-width: 765px) {
+  .root{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: auto;
+    border: none;
+    .category{
+      border: 1px solid;
+
+      .dropdown{
+        width: 100%;
+
+        button {
+          width: 100%;
+          display: flex;
+          justify-content: space-around;
+        }
+      }
+
+    }
+    .searchField{
+      margin: 10px 0;
+      border: 1px solid;
+
+    }
+  }
+}

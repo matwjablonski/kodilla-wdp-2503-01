@@ -13,7 +13,17 @@ import Button from '../Button/Button';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleCompare } from '../../../redux/compereRedux';
 
-const ProductBox = ({ id, category, name, price, promo, stars }) => {
+const ProductBox = ({
+  id,
+  category,
+  name,
+  price,
+  promo,
+  stars,
+  isFavorite,
+  isCompare,
+  oldPrice,
+}) => {
   const dispatch = useDispatch();
   const compared = useSelector(state => state.compared);
 
@@ -58,7 +68,7 @@ const ProductBox = ({ id, category, name, price, promo, stars }) => {
       <div className={styles.line}></div>
       <div className={styles.actions}>
         <div className={styles.outlines}>
-          <Button variant='outline'>
+          <Button variant='outline' className={isFavorite ? styles.active : undefined}>
             <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>
           <Button
@@ -70,6 +80,7 @@ const ProductBox = ({ id, category, name, price, promo, stars }) => {
           </Button>
         </div>
         <div className={styles.price}>
+          {oldPrice && <span className={styles.oldPrice}>$ {oldPrice}</span>}
           <Button noHover variant='small' className={styles.priceChange}>
             $ {price}
           </Button>
@@ -87,6 +98,9 @@ ProductBox.propTypes = {
   price: PropTypes.number,
   promo: PropTypes.string,
   stars: PropTypes.number,
+  isFavorite: PropTypes.bool,
+  isCompare: PropTypes.bool,
+  oldPrice: PropTypes.number,
 };
 
 export default ProductBox;
